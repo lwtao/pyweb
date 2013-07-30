@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>针对性减肥</title>
+<link rel="stylesheet" href="http://imageapp.leku.com/staticprj/zhenduixingjianfei/css/zhenduixingjianfei.css" />
+<link rel="stylesheet" href="/public/guanzhu.css" />
+<style>
+    span.Validform_wrong,span.Validform_right{padding-left:10px; color:#F00; font-weight:bold;}
+	span.Validform_right{ color:#78B212;}
+</style>
+<script src="http://imageapp.leku.com/staticprj/public/js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="http://imageapp.leku.com/staticprj/public/js/notqq.js" charset="GBK"></script>
+<script src="http://imageapp.leku.com/staticprj/zhenduixingjianfei/js/zhenduixingjianfei.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://fusion.qq.com/fusion_loader?appid=100697210&platform=qzone">
+</script>
+<script src="http://imageapp.leku.com/staticprj/public/js/Validform_v5.3_min.js"></script>
+<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript">
+$(function(){
+	fusion2.canvas.setHeight 
+	({ 
+	  // 可选。表示要调整的高度
+	  // 不指定height的值或指定为0则默认取当前窗口的实际高度。
+	  // 注：由于浏览器兼容问题或者应用内页面不规范，可能会导致高度自适应失效，则必须在这里指定每个页面的height值。
+	   height : 2900
+	   
+	}); 
+	$(".outLink").bind("click",function(){
+		window.open("http://115.28.45.242:8080/jump/")
+	});
+	
+});
+var validRecommendForm;
+$(document).ready(function(){
+	$("a.nextBtn").click(function(){
+		if(validRecommendForm.check()){
+			$(".testTitel_1").removeClass("testTitel_1Cur");
+			$(".testTitel_2").addClass("testTitel_2Cur");
+			$(".testBoxShow_1").hide();
+			$(".testBoxShow_2").show();
+		}else{
+			alert("请填入正确的信息！");
+		}
+	});
+	$("#sub").bind("click",function(){
+		fusion2.dialog.sendStory({
+			msg :  '你知道导致你肥胖的原因是什么吗？情绪致胖？生理遗传？还是代谢不足？来这里揭晓答案',
+			summary : "你知道导致你肥胖的原因是什么吗？情绪致胖？生理遗传？还是代谢不足？来这里揭晓答案",
+			title : "体重秘密",
+			img : "http://i.gtimg.cn/open/app_icon/00/69/72/10/100697210_100.png",
+			onClose : function() {
+				
+				$("#f1").submit();
+			}
+		});
+		
+	});
+	validRecommendForm=$("#f1").Validform({
+		tiptype:3
+		});
+});
+</script>
+
+</head>
+<body>
+<!-- 数据统计 -->
+	<input type="hidden" id="pf" value="qzone"/>
+	<div class="c">
+	<a class="backto" style="cursor: default;"></a>
+        <div class="share">
+        	<!-- <span>分享到：</span><a class="kongjian shareQQ"></a>
+        	<a class="pengyou shareQQ"></a>
+        	<a class="weibo shareQQ"></a> -->
+        </div>
+        <div class="testBox">
+			<ul class="testBox_title">
+				<li class="testTitel_1  testTitel_1Cur">测试肥胖程度</li>
+				<li class="testTitel_2">判断肥胖原因</li>
+				<li class="testTitel_3">揭晓最快减肥方案</li>
+			</ul>
+			<form action="http://115.28.45.242:8080/zdx_test/" method="get" id="f1">
+			<div class="testBoxShow testBoxShow_1">
+					<h3>您的基本情况</h3>
+					<p>
+						<strong>您的性别是</strong>
+						<input type="radio" name="sex" id="sex_man" checked />
+						<label for="sex_man">男</label>
+						<input type="radio" name="sex" id="sex_woman" />
+						<label for="sex_woman">女</label>
+					</p>
+					<p>
+						<strong>您的身高是</strong>
+						<input class="inputBox" type="text" name="height" id="" datatype="n3-3" errormsg="请填写正确的身高"/>
+						<span>厘米</span>
+					</p>
+					<p>
+						<strong>您的体重是</strong>
+						<input class="inputBox" type="text" name="weight" id="" datatype="n2-3" errormsg="请填写正确的体重"/>
+						<span>公斤</span>
+					</p>
+					<a href="#" class="nextBtn">下一步</a>
+			</div>
+			<div class="testBoxShow testBoxShow_2">
+					<h3> 请选择和您相符的描述（可多选）</h3>
+					<p>
+						<input type="checkbox" name="ck" id="checkBox_1" value="1"/><label for="checkBox_1">爱吃零食、常聚餐、食量大、口味重，喜欢多油、味重以及奶油制品</label>
+					</p>
+					<p>
+						<input type="checkbox" name="ck" id="checkBox_2" value="2" /><label for="checkBox_2">经常不吃早餐，晚餐很丰盛，食无定时，进食速度快</label>
+					</p>
+					<p>
+						<input type="checkbox" name="ck" id="checkBox_3" value="3" /><label for="checkBox_3">独处时常感失落、寂寞，萎靡不振或焦虑不安，易喜易怒易悲</label>
+					</p>
+					<p>
+						<input type="checkbox" name="ck" id="checkBox_4" value="4" /><label for="checkBox_4">工作类型安逸，体力消耗小；每周少于2次40分钟以上的流汗运动</label>
+					</p>
+					<p>
+						<input type="checkbox" name="ck" id="checkBox_5" value="5" /><label for="checkBox_5">从小就胖或青春期时突然发胖，家庭成员中有肥胖史</label>
+					</p>
+					<p>
+						<input type="checkbox" name="ck" id="checkBox_6" value="6"/><label for="checkBox_6">即使感到很热，流汗也很少，喜用偏热水洗澡，喜欢咖啡、红茶或罐装饮料和较咸食物</label>
+					</p>
+					
+					<a href="#" class="starTestBtn outLink" id="sub">开始测试</a>
+			</div>
+			</form>
+		</div>
+        <div class="go">
+        	<a class="go" href="http://115.28.45.242:8080/jump/" target="_blank">更多精彩内容请点击这里</a>
+        </div>
+    </div>
+   <div style="display: none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F592c0cae8a258d6efa842004a9853496' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+</body>
+</html>

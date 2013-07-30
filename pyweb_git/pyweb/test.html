@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>针对性减肥</title>
+<link rel="stylesheet" href="http://imageapp.leku.com/staticprj/zhenduixingjianfei/css/zhenduixingjianfei.css" />
+<link rel="stylesheet" href="/public/guanzhu.css" />
+<script src="http://imageapp.leku.com/staticprj/public/js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="http://imageapp.leku.com/staticprj/public/js/notqq.js" charset="GBK"></script>
+<script src="http://imageapp.leku.com/staticprj/zhenduixingjianfei/js/zhenduixingjianfei.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://fusion.qq.com/fusion_loader?appid=100697210&platform=${'pengyou' == param.pf?'pengyou':'qzone'}">
+</script>
+<script src="http://imageapp.leku.com/staticprj/public/js/Validform_v5.3_min.js"></script>
+<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript">
+$(function(){
+	fusion2.canvas.setHeight 
+	({ 
+	  // 可选。表示要调整的高度
+	  // 不指定height的值或指定为0则默认取当前窗口的实际高度。
+	  // 注：由于浏览器兼容问题或者应用内页面不规范，可能会导致高度自适应失效，则必须在这里指定每个页面的height值。
+	   height : 2900
+	   
+	}); 
+});
+</script>
+
+</head>
+<body>
+<!-- 数据统计 -->
+	<input type="hidden" id="pf" value="qzone"/>
+	<div class="c">
+	<a class="backto"  style="cursor: default;"></a>
+        <div class="share">
+        	<!-- <span>分享到：</span><a class="kongjian shareQQ"></a>
+        	<a class="pengyou shareQQ"></a>
+        	<a class="weibo shareQQ"></a> -->
+        </div>
+        <div class="testBox">
+			<ul class="testBox_title">
+				<li class="testTitel_1">测试肥胖程度</li>
+				<li class="testTitel_2">判断肥胖原因</li>
+				<li class="testTitel_3 testTitel_3Cur">揭晓最快减肥方案</li>
+			</ul>
+			<div class="testBoxShow testBoxShow_3">
+				<p><strong>一、您的体重属于</strong><span class="resultShow">{{desc }}</span></p>
+				<p>过度肥胖可引发心脏病、高血糖、高血压等疾病！请重视！</p>
+				{%if show_ %}
+				<p>
+					<strong>二、导致您局部肥胖的原因是</strong>
+				</p>
+				<p class="reasonShowWarp">
+				{% autoescape off %}
+						{{html }}
+				{% endautoescape %}
+				</p>
+				<p>
+					<strong>三、为您定制的局部减肥方案是</strong>
+				</p>
+				<p style="padding-left: 142px;">
+						<!-- <span>适量的运动&nbsp;&nbsp;+</span> -->
+						<a  href="http://115.28.45.242:8080/jump/" target="_blank" class="testOutLink outLink"><img src="http://imageapp.leku.com/staticprj/gstdmm/img/testOutLink.gif"/><i><img src="http://imageapp.leku.com/staticprj/gstdmm/img/shouzhi.gif"/></i></a>
+				</p>
+				{%endif%}
+			</div>
+		</div>
+        <div class="go">
+        	<a class="go outLink"  href="http://115.28.45.242:8080/jump/" target="_blank">更多精彩内容请点击这里</a>
+        </div>
+    </div>
+   <div style="display: none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F592c0cae8a258d6efa842004a9853496' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+</body>
+</html>
